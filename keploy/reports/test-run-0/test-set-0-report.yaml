@@ -1,0 +1,193 @@
+version: api.keploy.io/v1beta1
+name: test-set-0-report
+status: PASSED
+success: 3
+failure: 0
+total: 3
+tests:
+    - kind: Http
+      name: test-set-0
+      status: PASSED
+      started: 1716664426
+      completed: 1716664427
+      test_case_path: /Users/sarthak_1/Documents/Keploy/Lima-workspace/kotlin-spring-boot-jpa-rest-api-demo/keploy/test-set-0
+      mock_path: /Users/sarthak_1/Documents/Keploy/Lima-workspace/kotlin-spring-boot-jpa-rest-api-demo/keploy/test-set-0
+      test_case_id: test-1
+      req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/api/articles
+        header:
+            Accept: '*/*'
+            Content-Length: "92"
+            Content-Type: application/json
+            Host: localhost:8080
+            User-Agent: curl/7.88.1
+        body: '{"title": "How to learn Spring framework", "content": "Resources to learn Spring framework"}'
+        timestamp: 2024-05-25T19:13:10.68006009Z
+      resp:
+        status_code: 200
+        header:
+            Content-Type: application/json
+            Date: Sat, 25 May 2024 19:13:47 GMT
+        body: '{"id":2,"title":"How to learn Spring framework","content":"Resources to learn Spring framework"}'
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.date: []
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Sat, 25 May 2024 19:13:11 GMT
+              actual:
+                key: Date
+                value:
+                    - Sat, 25 May 2024 19:13:47 GMT
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '{"id":2,"title":"How to learn Spring framework","content":"Resources to learn Spring framework"}'
+              actual: '{"id":2,"title":"How to learn Spring framework","content":"Resources to learn Spring framework"}'
+        dep_result: []
+    - kind: Http
+      name: test-set-0
+      status: PASSED
+      started: 1716664427
+      completed: 1716664427
+      test_case_path: /Users/sarthak_1/Documents/Keploy/Lima-workspace/kotlin-spring-boot-jpa-rest-api-demo/keploy/test-set-0
+      mock_path: /Users/sarthak_1/Documents/Keploy/Lima-workspace/kotlin-spring-boot-jpa-rest-api-demo/keploy/test-set-0
+      test_case_id: test-2
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/api/articles
+        header:
+            Accept: application/json
+            Host: localhost:8080
+            User-Agent: curl/7.88.1
+        body: ""
+        timestamp: 2024-05-25T19:13:13.292785244Z
+      resp:
+        status_code: 200
+        header:
+            Content-Type: application/json
+            Date: Sat, 25 May 2024 19:13:47 GMT
+        body: '[{"id":1,"title":"How to learn Spring framework","content":"Resources to learn Spring framework"},{"id":2,"title":"How to learn Spring framework","content":"Resources to learn Spring framework"}]'
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.date: []
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Sat, 25 May 2024 19:13:13 GMT
+              actual:
+                key: Date
+                value:
+                    - Sat, 25 May 2024 19:13:47 GMT
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '[{"id":1,"title":"How to learn Spring framework","content":"Resources to learn Spring framework"},{"id":2,"title":"How to learn Spring framework","content":"Resources to learn Spring framework"}]'
+              actual: '[{"id":1,"title":"How to learn Spring framework","content":"Resources to learn Spring framework"},{"id":2,"title":"How to learn Spring framework","content":"Resources to learn Spring framework"}]'
+        dep_result: []
+    - kind: Http
+      name: test-set-0
+      status: PASSED
+      started: 1716664427
+      completed: 1716664427
+      test_case_path: /Users/sarthak_1/Documents/Keploy/Lima-workspace/kotlin-spring-boot-jpa-rest-api-demo/keploy/test-set-0
+      mock_path: /Users/sarthak_1/Documents/Keploy/Lima-workspace/kotlin-spring-boot-jpa-rest-api-demo/keploy/test-set-0
+      test_case_id: test-3
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/api/articles
+        header:
+            Accept: application/json
+            Host: localhost:8080
+            User-Agent: curl/7.88.1
+        body: ""
+        timestamp: 2024-05-25T19:13:16.796294401Z
+      resp:
+        status_code: 200
+        header:
+            Content-Type: application/json
+            Date: Sat, 25 May 2024 19:13:47 GMT
+        body: '[{"id":1,"title":"How to learn Spring framework","content":"Resources to learn Spring framework"},{"id":2,"title":"How to learn Spring framework","content":"Resources to learn Spring framework"}]'
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.date: []
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Sat, 25 May 2024 19:13:16 GMT
+              actual:
+                key: Date
+                value:
+                    - Sat, 25 May 2024 19:13:47 GMT
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '[{"id":1,"title":"How to learn Spring framework","content":"Resources to learn Spring framework"},{"id":2,"title":"How to learn Spring framework","content":"Resources to learn Spring framework"}]'
+              actual: '[{"id":1,"title":"How to learn Spring framework","content":"Resources to learn Spring framework"},{"id":2,"title":"How to learn Spring framework","content":"Resources to learn Spring framework"}]'
+        dep_result: []
+test_set: test-set-0

@@ -1,0 +1,37 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-2
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/api/articles
+        header:
+            Accept: application/json
+            Host: localhost:8080
+            User-Agent: curl/7.88.1
+        body: ""
+        timestamp: 2024-05-25T19:13:13.292785244Z
+    resp:
+        status_code: 200
+        header:
+            Content-Type: application/json
+            Date: Sat, 25 May 2024 19:13:13 GMT
+        body: '[{"id":1,"title":"How to learn Spring framework","content":"Resources to learn Spring framework"},{"id":2,"title":"How to learn Spring framework","content":"Resources to learn Spring framework"}]'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-05-25T19:13:16.314435529Z
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1716664396
+curl: |
+    curl --request GET \
+      --url http://localhost:8080/api/articles \
+      --header 'Accept: application/json' \
+      --header 'Host: localhost:8080' \
+      --header 'User-Agent: curl/7.88.1' \

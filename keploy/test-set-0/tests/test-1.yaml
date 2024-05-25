@@ -1,0 +1,41 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-1
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/api/articles
+        header:
+            Accept: '*/*'
+            Content-Length: "92"
+            Content-Type: application/json
+            Host: localhost:8080
+            User-Agent: curl/7.88.1
+        body: '{"title": "How to learn Spring framework", "content": "Resources to learn Spring framework"}'
+        timestamp: 2024-05-25T19:13:10.68006009Z
+    resp:
+        status_code: 200
+        header:
+            Content-Type: application/json
+            Date: Sat, 25 May 2024 19:13:11 GMT
+        body: '{"id":2,"title":"How to learn Spring framework","content":"Resources to learn Spring framework"}'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-05-25T19:13:13.685339738Z
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1716664393
+curl: |-
+    curl --request POST \
+      --url http://localhost:8080/api/articles \
+      --header 'Accept: */*' \
+      --header 'Content-Type: application/json' \
+      --header 'Host: localhost:8080' \
+      --header 'User-Agent: curl/7.88.1' \
+      --data '{"title": "How to learn Spring framework", "content": "Resources to learn Spring framework"}'
